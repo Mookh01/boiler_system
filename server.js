@@ -14,6 +14,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use('/home', function(req, res) {
+    res.render('home');
+});
+
 app.get('/login', function(req, res) {
     res.render('login');
 });
@@ -21,9 +26,6 @@ app.get('/register', function(req, res) {
     res.render('register');
 });
 
-app.get('/home', function(req, res) {
-    res.render('home');
-});
 app.get('/boiler', function(req, res) {
     res.render('boiler');
 });
