@@ -18,7 +18,7 @@ body {
 
 form {
     white-space: nowrap;
-    margin: 50px 0px 30px 30px;
+    margin: 50px 0px 50px 50px;
 }
 
 a {
@@ -31,7 +31,11 @@ table {
 }
 
 h2 {
-    margin-left: 20px;
+    margin-left: 50px;
+}
+
+h3 {
+    margin-left: 50px;
 }
 
 ol {
