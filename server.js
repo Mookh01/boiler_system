@@ -45,8 +45,10 @@ app.get('/equipquest', function(req, res) {
     res.render('equipquest');
 });
 var server = require('http').createServer(app);
+
 server.listen(app.get('port'), function() {
     console.log('Express is running on port ' + app.get('port'));
 });
+
 
 // require('/routes')(server);
