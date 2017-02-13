@@ -1,0 +1,69 @@
+<% layout('/layout') %>
+<% block('title', 'Chem Feed / Testing') %>
+<script src="/socket.io/socket.io.js" defer></script>
+<script src="./script.js" defer></script>
+
+<h2> Chemical Feed Information </h2>
+<div class="col-md-4 col-md-offset-4">
+ <label style="font-size: 1.2em;">Pot Feeder available:</label>
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+</div>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Product Name</th>
+      <th>Product Ingredients</th>
+      <th>Product Function</th>
+      <th>Feed Method</th>
+      <th>Usage Rate</th>
+      <th>Type L/P</th>
+    </tr>
+  </thead>
+  <tbody id="tbl1EntAttributes">
+    <tr valign="top">
+      <th scope="row">1</th>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>   
+    </tr>  
+  </tbody>
+</table>
+<button class="btn btn-success" id="chemfeed" style="margin-left:10%;">Add Row</button>
+<button class="btn btn-danger" id="remove1" style="margin-left:10%;">Add Row</button>
+<h2> Testing Program Information </h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Test Name</th>
+      <th>Current Ranges</th>
+      <th>Titrant or Drop Kit</th>
+      <th>Spectrometer</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody id="tbl2EntAttributes">
+    <tr>
+      <th scope="row">1</th>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+    </tr> 
+
+
+  </tbody>
+</table>
+<button class="btn btn-success"  id="testing"   style="margin-left:10%;">Add Row</button>
+<button class="btn btn-danger" id="remove2" style="margin-left:10%;">Add Row</button>

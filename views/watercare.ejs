@@ -1,0 +1,99 @@
+<% layout('/layout') %>
+<% block('title', 'Water Care') %>
+<script src="/socket.io/socket.io.js" defer></script>
+<script src="/script.js" defer></script>
+<div style="margin: 20px;"> 
+<h1> Water Care Survey Checklist </h1>
+<h2> Your representative will be working to collect the following information regarding your equipment operation.</h2>
+</div>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>System</th>
+      <th>Process Cooled</th>
+      <th>Tower Designation</th>
+      <th>Tonnage</th>
+      <th>Recirculation Rate</th>
+      <th>Hours of Operation / Day</th>
+       <th>Days of Operation / Year</th>
+    </tr>
+  </thead>
+   <tbody id="tbl3EntAttributes">
+    <tr>
+      <th scope="row">1</th>
+      <td>Cooling Tower</td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+    </tr>
+
+  </tbody>
+</table>
+<button class="btn btn-success"  id="watercare"   style="margin-left:10%;">Add Row</button>
+<button class="btn btn-danger" id="remove3" style="margin-left:10%;">Add Row</button>
+
+  <form class="form-horizontal" role="form">
+  <div class="form-group col-sm-6">
+        <label for="usr">Are your towers currently treated with Scale Corrosion Inhibitor and Biocide?</label>
+            <input class="form-control">
+                    <label for="usr">Please provide observations of the internal condition of the towers - Scale, Bio, Corrosion?</label>
+            <input class="form-control">
+                    <label for="usr">Do you currently receive evaporative credits for you cooling tower?</label>
+            <input class="form-control">
+                    <label for="usr">Do you have a make up or blowdown meter for each tower?</label>
+            <input class="form-control">
+            
+             <p>If so, please provide records for calculating annual make and blowdown for each system</p>
+             </div>
+            </form><br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>System</th>
+      <th>Process Supported</th>
+      <th>Boiler Designation</th>
+      <th>Horse Power</th>
+      <th>%load</th>
+      <th>Hours of Operation / Day</th>
+       <th>Days of Operation / Year</th>
+    </tr>
+  </thead>
+   <tbody id="tbl4EntAttributes">
+    <tr>
+      <th scope="row">1</th>
+      <td>Boiler</td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+      <td><input> </input></td>
+    </tr>
+
+  </tbody>
+</table>
+<button class="btn btn-success"  id="boilercare"   style="margin-left:10%;">Add Row</button>
+<button class="btn btn-danger" id="remove4" style="margin-left:10%;">Add Row</button>
+
+  <form class="form-horizontal" role="form">
+  <div class="form-group col-sm-6">
+        <label for="usr">Does your facility produce Aquafina?</label>
+            <input class="form-control">
+                    <label for="usr">Are your boilers currently treated?</label>
+            <input class="form-control">
+                    <label for="usr">Please provide observations of the internal condition of the Boilers - Scale, Corrosion?</label>
+            <input class="form-control">
+                    <label for="usr">Do you have a steam meter?</label>
+            <input class="form-control">
+            
+             <p>If so, please provide records for calculating annual steam production</p>
+             </div>
+            </form><br>

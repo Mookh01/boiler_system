@@ -1,0 +1,82 @@
+<% layout('/layout') %>
+<% block('title', 'General System Survey') %>
+<script src="/socket.io/socket.io.js" defer></script>
+<script src="/script.js" defer></script>
+
+    <h3> Boiler System:</h3>
+    <p> General System Information </p>
+	  <div class="form-group col-sm-8">
+	<form >
+        <label for="usr">Make-up Usage:</label>
+            <input class="form-control"   >
+        <label for="usr">LBS. Per/Hour:</label>
+             <input class="form-control"   >
+        <label for="usr">Steam Pressure:</label>
+             <input class="form-control"   >
+        <label for="usr">%Condensate Return:</label>
+             <input class="form-control"   >
+			 </div>
+
+
+	<div class="form-inline col-sm-8 selection">
+		<label> Food Contact: </label>				
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+        <label>M.U. Water Meter:</label>  
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+        <label>Deaerator:</label>
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+</div>
+
+  <div class="form-group col-sm-8">
+		<label >Make-up Source:</label>
+             <input class="form-control" >
+        <label for="usr">Water/Fire Tube:</label>
+             <input class="form-control"   >
+		  <label for="usr">Rating HP:</label>
+             <input class="form-control"   >
+        <label for="usr">Fuel:</label>
+             <input class="form-control" >	 
+</div>
+
+  	<div class="form-inline col-sm-8 selection">
+        <label>U.S.D.A.:</label>
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+        <label for="usr">BD Water Meter:</label>
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+        <label for="usr">Deaerator Pressure:</label>
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+		<label for="usr">Automated Blowdown:</label>
+<select>
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select>
+	</div>	
+	<div class="form-inline col-sm-8">
+ <button class="btn btn-success btn-lg" style="margin-bottom: 60px;">Submit</button>
+ </div>
+        </form>

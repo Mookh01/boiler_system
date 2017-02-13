@@ -1,0 +1,105 @@
+.column {
+    float: left;
+    width: 33%;
+}
+
+input {
+    display: block;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+body {
+    padding-top: 130px;
+    padding-bottom: 20px;
+    background-color: #7E8F7C;
+    color: black;
+}
+
+form {
+    white-space: nowrap;
+    margin: 50px 0px 30px 30px;
+}
+
+a {
+    /*margin: 5px;*/
+    font-weight: bold;
+}
+
+table {
+    margin: 20px;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+ol {
+    font-size: 1.2em;
+    color: black;
+}
+
+ul {
+    font-size: 1.2em;
+    color: black;
+}
+
+.selection {
+    /* used in system.ejs   */
+    margin: 15px;
+}
+
+button.accordion {
+    /* used in instruction.ejs   */
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+p {
+    /* used throughout app   */
+    font-size: 18px;
+    color: black;
+}
+
+
+/*  accordian behavior in instruction.ejs   */
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: white;
+}
+
+div.panel {
+    padding: 0 10px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.btn-primary {
+    color: black;
+}
+
+.tempfix {
+    margin-left: 10%;
+}
+
+.navbar {
+    background-color: #7E8F7C;
+}
+
+
+/* This changes our text color  */
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
