@@ -46,6 +46,15 @@ app.get('/watercare', function(req, res) {
 app.get('/equipquest', function(req, res) {
     res.render('equipquest');
 });
+
+app.get('/calculate', function(req, res) {
+    res.render('calculate');
+});
+
+app.get('/popouts', function(req, res) {
+    res.render('popouts');
+});
+
 var server = require('http').createServer(app);
 
 server.listen(app.get('port'), function() {

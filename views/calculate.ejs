@@ -1,0 +1,371 @@
+<% layout('/layout') %>
+<% block('title', 'Chem Feed / Testing') %>
+<script src="/script.js" defer></script>
+<script src="/calculation.js" defer></script>
+<table class="table table-default">
+  <thead>
+    <tr>
+    <form class="fullform">
+    <!-- ==================================== -->
+      <th><h3>Cooling Tower</h3></th>
+          <!-- ==================================== -->
+      <th>Calculations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr valign="top">
+      <th>Operational Information</th>
+      <td ><input class="hawkinsrep"></td>
+       </tr> 
+      <tr>
+      <th>Tower Type</th>
+      <td>
+	<select id="types" name="types" class="hawkinsrep">
+ <option value="Type 1">Evap Condenser</option>
+ <option value="Type 2">Type 2</option>
+ <option value="Type 3">Type 3</option>
+ <option value="Other">Other</option>
+</select>
+    <input type="text" id="other" style="display: none;" /></td>
+       </tr> 
+             <tr>
+      <th>Hours of Operation / day </th>
+      <td><select class="1-24 hawkinsrep hoursofop"></select ></td>
+
+       </tr> 
+       <tr>
+      <th>Days of Operation / year </th>
+       <td><select  class="1-365 hawkinsrep daysofop"></select ></td>
+       </tr> 
+     <tr>
+      <th>Months of Operation / year </th>
+       <td><select  class="1-12 hawkinsrep monthsofop"></select ></td>
+       </tr> 
+              <tr>
+      <th>Recirculating Rate/ gpm </th>
+      <td><input type="text" id="repframe" class="recirculatingrate hawkinsrep" name="recirculatingrate"></td>
+       </tr> 
+              <tr>
+      <th>Delta T </th>
+       <td><input type="text" id="repframe" class="deltat hawkinsrep" name="deltat"></td>
+       </tr> 
+              <tr>
+              <div class="form-horizontal">
+      <th>Water Cost / kgal with Sewer</th>
+      <td><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><input placeholder="4.00" class="watercost hawkinsrep" name="watercost"></td>
+       </div></tr> 
+              <tr>
+      <th>Scale / Bio Present </th>
+      <td>	<select class="hawkinsrep">
+	<option value="na">---</option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	</select></td>
+
+       </tr>  
+    </tr>  
+  </tbody>
+</table>
+  <h2> -------------------------------------------------------------------</h2>
+
+
+
+<form id="calvalcurrent">
+<table class="table table-default">
+  <thead>
+    <tr>
+        <!-- ==================================== -->
+      <th><h3>Calculated Values - Current Conditions</h3></th>
+          <!-- ==================================== -->
+      <th>Calculations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Concentration Ratio - Current</th>
+      <td ><input type="text" id="repframe" class="concentrationratio hawkinsrep"  name="concentrationratio"></td>
+       </tr> 
+      <tr>
+      <th>Evaporation Rate gpm</th>
+ <!--      Recirculating Rate / gpm * Delta T    -->
+     <td><span id="frame" class="answer1">0</span></td>
+       </tr> 
+
+       <tr>
+      <th>Make-Up Rate gpm</th>
+       <td><span id="frame" class="answer2">0</span></td>
+       </tr> 
+     <tr>
+      <th>Blowdown Rate gpm </th>
+          <td><span id="frame" class="answer3">0</span></td>
+       </tr> 
+              <tr>
+      <th>MakeUp per month (MM #s)</th>
+           <td><span id="frame" class="answer4">0</span></td>
+       </tr> 
+              <tr>
+      <th>MakeUp per year (MM #s)</th>
+         <td><span id="frame" class="answer5">0</span></td>
+       </tr> 
+              <tr>
+      <th>Blowdown per month (MM #s)</th>
+        <td><span id="frame" class="answer6">0</span></td>
+       </tr> 
+              <tr>
+      <th>Blowdown per year (MM #s)</th>
+       <td><span id="frame" class="answer7">0</span></td>
+       </tr>  
+    </tr>  
+  </tbody>
+</table>
+
+</form>
+</br>						
+				
+
+
+
+<h2> -------------------------------------------------------------------</h2>
+<table class="table table-default">
+  <thead>
+    <tr>
+        <!-- ==================================== -->
+      <th><h3>Calculated Values - Hawkins Program</h3></th>
+          <!-- ==================================== -->
+      <th>Calculations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Concentration Ratio - Potential</th>
+      <td ><input type="text" id="repframe" class="hawkinsconcentrationratio hawkinsrep"  name="hawkinsconcentrationratio"></td>
+       </tr> 
+      <tr>
+      <th>Evaporation Rate gpm</th>
+ <!--      Recirculating Rate / gpm * Delta T    -->
+     <td><span id="frame" class="answer1">0</span></td>
+       </tr> 
+
+       <tr>
+      <th>Make-Up Rate gpm</th>
+       <td><span id="frame" class="answer8">0</span></td>
+       </tr> 
+     <tr>
+      <th>Blowdown Rate gpm </th>
+          <td><span id="frame" class="answer9">0</span></td>
+       </tr> 
+              <tr>
+      <th>MakeUp per month (MM #s)</th>
+           <td><span id="frame" class="answer10">0</span></td>
+       </tr> 
+              <tr>
+      <th>MakeUp per year (MM #s)</th>
+         <td><span id="frame" class="answer11">0</span></td>
+       </tr> 
+              <tr>
+      <th>Blowdown per month (MM #s)</th>
+        <td><span id="frame" class="answer12">0</span></td>
+       </tr> 
+              <tr>
+      <th>Blowdown per year (MM #s)</th>
+       <td><span id="frame" class="answer13">0</span></td>
+       </tr>  
+    </tr>  
+  </tbody>
+</table>
+<h2> -------------------------------------------------------------------</h2>
+<table class="table table-default">
+  <thead>
+    <tr>
+      <!-- ==================================== -->
+      <th><h3>Calculated Savings with Hawkins Program </h3></th>
+        <!-- ==================================== -->
+      <th>Calculations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Water Savings gpy</th>
+      <td><span id="frame" class="answer14">0</span></td>
+       </tr> 
+      <tr>
+      <th>Water Savings $/yr</th>
+     <td><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span id="frame" class="answer15 totals">0</span></td>
+       </tr> 
+       <tr>
+      <th>Energy Savings - Scale/Bio Control</th>
+              <td><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><input type="text" id="repframe" class="hawkinsenergysavings hawkinsrep"  name="hawkinsenergysavings"></td>
+       </tr> 
+     <tr><th style="text-align:center;">Enter from Chiller Efficiency Tab</th></tr>
+  </tbody>
+</table>
+<h2> -------------------------------------------------------------------</h2>
+<table class="table table-default">
+  <thead>
+    <tr>
+      <!-- ==================================== -->
+      <th><h3>Hawkins Program Calculations</h3> <h5>Assumes Proper Cycles of Concentration from Box Above</h5></th>
+        <!-- ==================================== -->
+      <th>Calculations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Inhibitor Type.package</th>
+      <td ><input class=" inhibitortype totals"></td>
+       </tr> 
+      <tr>
+      <th>Inhibitor Dosage ppm</th>
+     <td ><input class="inhibitordosage hawkinsrep"></td>
+       </tr> 
+       <tr>
+      <th>Inhibitor Density lb / gal</th>
+        <td ><input class="inhibitordensity hawkinsrep"></td>
+       </tr> 
+     <tr>
+      <th>Inhibitor Price from price list</th>
+        <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><input class="inhibitorprice hawkinsrep"></td>
+       </tr> 
+              <tr>
+      <th>#s per month</th>
+        <td><span id="frame" class="answer16">0</span></td>
+       </tr> 
+              <tr>
+      <th>#s per year</th>
+        <td><span id="frame" class="answer17">0</span></td>
+       </tr> 
+              <tr>
+      <th>gals per month</th>
+       <td><span id="frame" class="answer18">0</span></td>
+       </tr> 
+              <tr>
+      <th>gals per year</th>
+      <td><span id="frame" class="answer19">0</span></td>
+       </tr>  
+       <tr>
+      <th>price per month</th>
+       <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span id="frame" class="answer20 totals">0</span></td>
+       </tr> 
+              <tr>
+      <th>price per year</th>
+       <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span id="frame" class="answer21 totals">0</span></td>
+       </tr>  
+  </tbody>
+</table>
+<h2> -------------------------------------------------------------------</h2>
+<table class="table table-default">
+  <thead>
+    <tr>
+      <th><h5></h5></th>
+      <th>Calculations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Biocide Type.package</th>
+      <td ><input class=" Biocidetype totals"></td>
+       </tr> 
+      <tr>
+      <th>Biocide Dosage ppm</th>
+        <td ><input class="biocidedosage hawkinsrep"></td>
+       </tr> 
+       <tr>
+      <th>Biocide Density lb / gal</th>
+        <td ><input class="biocidedensity hawkinsrep"></td>
+       </tr> 
+     <tr>
+      <th>Biocide Price from price list</th>
+        <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><input class="biocideprice hawkinsrep"></td>
+       </tr> 
+              <tr>
+      <th>#s per month</th>
+       <td><span id="frame" class="answer22">0</span></td>
+       </tr> 
+              <tr>
+      <th>#s per year</th>
+             <td><span id="frame" class="answer23">0</span></td>
+       </tr> 
+              <tr>
+      <th>gals per month</th>
+            <td><span id="frame" class="answer24">0</span></td>
+       </tr> 
+              <tr>
+      <th>gals per year</th>
+           <td><span id="frame" class="answer25">0</span></td>
+       </tr>  
+       <tr>
+      <th>price per month</th>
+       <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span id="frame" class="answer26 totals">0</span></td>
+       </tr> 
+      <th>price per year</th>
+       <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span id="frame" class="answer27 totals">0</span></td>
+       </tr> 
+  </tbody>
+</table>
+
+<h2> -------------------------------------------------------------------</h2>
+
+<table class="table table-default">
+  <thead>
+    <tr>
+      <th><h5></h5></th>
+      <th>Calculations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Total Cooling Tower #1</th>
+            <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span type="text" class="answer28 totals" name="answer28" >0</span>
+       </tr> 
+
+       </tbody>
+       </table>
+
+       <h2> -------------------------------------------------------------------</h2>
+<table class="table table-default">
+  <thead>
+    <tr>
+      <!-- ==================================== -->
+      <th><h3>All Cooling Towers</h3></th>
+       <!-- ==================================== -->
+      <th><h3>Calculations</h3></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr valign="top">
+      <th>Hawkins Total </th>
+      <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span type="text" class="answer28 totals" name="answer28" >0</span>
+       </tr> 
+      <tr>
+      <th>Equipment Required</th>
+     <td ><input class="totals"></td>
+       </tr> 
+       <tr>
+      <th>Water Savings $ year</th>
+        <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span type="text" class="totals" name="" >0</span></td>
+       </tr> 
+     <tr>
+      <th>Energy Savings $ /year</th>
+        <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span type="text" class="totals" name="" >0</span></td>
+       </tr> 
+              <tr>
+      <th>Total Program Savings</th>
+       <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span type="text" class="totals" name="" >0</span></td>
+       </tr> 
+              <tr>
+      <th>Water Savings gpy</th>
+        <td ><label class="control-label col-xs-1" for="$" style="font-size:1.5em;">$</label><span type="text" class="totals" name="" >0</span></td>
+       </tr> 
+
+  </tbody>
+</table>
+</form>
+
+
